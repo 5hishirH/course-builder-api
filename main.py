@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from app.core.config import settings
-from app.routes import material
+from app.routes import material, video
 
 app = FastAPI(
     title=settings.APP_NAME
@@ -21,3 +21,4 @@ def check_health():
     return {"success": True}
 
 app.include_router(material.router)
+app.include_router(video.router)
