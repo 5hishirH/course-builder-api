@@ -77,3 +77,34 @@ async def create_material(
         created_at=new_material.created_at,
         updated_at=new_material.updated_at
     )
+
+@router.get("/api/materials", response_model=list[MaterialResponse])
+async def get_all_materials(
+    request: Request,
+    db: AsyncSession = Depends(get_db)
+):
+    stmt = select(Material).order_by(Material.created_at.desc())
+    result = await db.execute(stmt)
+
+    materials = result.scalars().all()
+
+    response = []
+
+    for material in materials:
+        material_url = construct_material_url(
+            str(request.base_url),
+            material.id
+        )
+
+        response.append(
+            MaterialResponse(
+                id=material.id,
+                name=material.name,
+                desc=material.desc,
+                materialUrl=material_url,
+                created_at=material.created_at,
+                updated_at=material.updated_at
+            )
+        )
+
+    return response
