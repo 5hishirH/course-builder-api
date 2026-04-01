@@ -1,0 +1,118 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# Test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# FastAPI specific
+*.db
+*.sqlite3
+
+# Migrations (optional - depends on workflow)
+alembic/versions/*.pyc
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ruff / linting
+.ruff_cache/
+
+# Pyright
+.pyright/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+
+# Node (if frontend included)
+node_modules/
+
+# Temporary files
+tmp/
+temp/
+
+# Secrets
+secrets/
+*.key
+*.pem
+
+# Backup files
+*.bak
+*.backup
+
+# Static build outputs (optional)
+staticfiles/
+
+# Poetry
+poetry.lock
+
+# UV (if using uv)
+.uv/
+
+# Pyenv
+.python-version
+.vercel
