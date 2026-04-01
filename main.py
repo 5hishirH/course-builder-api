@@ -11,6 +11,7 @@ app = FastAPI(
 def read_root():
     return FileResponse("templates/index.html")
 
+@app.get("/favicon.ico")
 @app.get("/favicon.png")
 def get_favicon():
     return FileResponse("assets/favicon.png")
